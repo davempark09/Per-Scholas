@@ -53,7 +53,7 @@ console.log(findLongestWord(arr).length)
 
 var prompt=require('prompt-sync')();
 var amt=prompt('How Many Words Do You Want To Run: ')
-const arr=[]
+const arr2=[]
 var num=prompt('What Number Do You Wish The Words Be Longer Then: ')
 const win=[]
 for (i=1;i<=amt;i++){
@@ -73,6 +73,6 @@ function filterLongWords(ent) {
         return ('There Is No Word Longer Than ' + num);
     }
   }
-console.log(filterLongWords(arr))
+console.log(filterLongWords(arr2))
 
 
