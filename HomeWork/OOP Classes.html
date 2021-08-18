@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OOP Classes</title>
+        <style>
+            .rectangle {
+              height: 50px;
+              width: 100px;
+              background-color: #555;
+            }
+            .circle {
+            height: 50px;
+            width: 50px;
+            background-color: #555;
+            border-radius: 50%;
+            }
+            .square {
+            height: 50px;
+            width: 50px;
+            background-color: #555;
+            }
+            </style>
+    </head>
+    <body>
+        <h2>Circle</h2>
+        <div class="circle"></div>
+        <p id="circ1"></p>
+        <p id="circ2"></p>
+
+        <h2>Rectangle</h2>
+        <div class="rectangle"></div>
+        <p id="rect1"></p>
+        <p id="rect2"></p>
+
+        <h2>Square</h2>
+        <div class="square"></div>
+        <p id="squa1"></p>
+        <p id="squa2"></p>
+
+
+          <script>
+            class Circle {
+                constructor(radius) {
+                this.radius = radius;
+                        }
+                    circle_area() {
+                      return (Math.PI * this.radius * this.radius);
+                        }
+                    circle_circumference() {
+                          return (2 * Math.PI * this.radius);
+                        }
+                    }
+
+            class Rectangle {
+                constructor(length,width,sides) {
+                this.length = length;
+                this.width = width;
+                this.sides = sides;
+                        }
+                    rectangle_area() {
+                      return (this.length * this.width);
+                        }
+                    total_sides() {
+                        return (this.sides)
+                    }
+                    }
+
+            class Square {
+                constructor(length,width,sides) {
+                this.length = length;
+                this.width = width;
+                this.sides = sides;
+                        }
+                    square_area() {
+                      return (this.length * this.width);
+                        }
+                    total_sides() {
+                        return (this.sides)
+                    }
+                    }
+              
+const circle1 = new Circle(3)
+circle1.circle_area();
+circle1.circle_circumference();
+
+document.getElementById("circ1").innerHTML = "The area of the circle is " + circle1.circle_area();
+document.getElementById("circ2").innerHTML = "The circumference of the circle is " + circle1.circle_circumference();
+
+const rectangle1 = new Rectangle(3,4,4)
+rectangle1.rectangle_area();
+rectangle1.total_sides();
+
+document.getElementById("rect1").innerHTML = "The area of the rectangle is " + rectangle1.rectangle_area();
+document.getElementById("rect2").innerHTML = "The total number of sides a rectangle has is " + rectangle1.total_sides();
+
+const square1 = new Square(2,2,4)
+square1.square_area();
+square1.total_sides();
+
+document.getElementById("squa1").innerHTML = "The area of a square is " + square1.square_area();
+document.getElementById("squa2").innerHTML = "The total number of sides a square has is " + square1.total_sides();
+
+
+
+          </script>
+    </body>
+    
+    </html>
+    
