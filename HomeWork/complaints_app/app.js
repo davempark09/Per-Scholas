@@ -18,29 +18,33 @@ buttons.forEach((btn) => {
 
 function fetchData(inp, city) {
     list.innerHTML = "";
-    fetch('https://data.cityofnewyork.us/resource/erm2-nwe9.json?agency=NYPD')
+    fetch(`https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=${inp}&agency=NYPD&borough=${city.toUpperCase()}`)
     .then((response) => response.json())
-    .then((data) => {data
-        let filt = data.filter(dat => dat.borough==city.toUpperCase())
-        console.log(filt)
-        for (i=0;i<inp;i++){
+    .then((data) => {
+        console.log(data)
+        for (i=0;i<data.length;i++){
                 list.insertAdjacentHTML(
                 "afterbegin",
                 `<div class="stuff">
-                <li class="desc">${filt[i].descriptor}</li>
-                  <button id="resp" onload="visi()">What did the police do??</button>
+                <li class="desc">${data[i].descriptor}</li>
+                  <button class="resp">What did the police do??</button>
                     </div>
                     <div class="response">
-                        <p id="idk" class="down">${filt[i].resolution_description}</p>
+                        <p class="down idk">${data[i].resolution_description}</p>
                     </div>
                 `
-                )}
-                document.getElementById("resp").addEventListener("click", visi);
-                function visi() {
-                    var tog = document.getElementById("idk");
-                    tog.classList.remove("down");
-                  }        
-                }
-                
-                )}
-                
+                );
+                visi();
+            }
+          });
+        function visi() {
+          let res = document.querySelector(".resp");
+          var tog = document.querySelector(".idk");
+          res.addEventListener("click", () => {
+            tog.classList.remove("down");
+            console.log("clicked");
+          });
+        }
+      }
+            
+           
