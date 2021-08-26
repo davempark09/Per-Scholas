@@ -1,3 +1,5 @@
+
+
 const menu = document.querySelector('#mobile')
 const menuLinks = document.querySelector('.navMenu')
 
@@ -65,7 +67,6 @@ function getMealRecipe(e){
 
 
 function mealRecipeModal(meal){
-    console.log(meal);
     meal = meal[0];
     let html = `
     <h2 class = "recipeTitle">${meal.strMeal}</h2>
@@ -73,9 +74,6 @@ function mealRecipeModal(meal){
     <div class = "recipeInstruct">
     <h3>Instructions:</h3>
     <p>${meal.strInstructions}</p>
-    </div>
-    <div class = "recipeMealImg">
-    <img src = "${meal.strMealThumb}" alt = "">
     </div>
     <div class = "recipeLink">
     <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
@@ -89,7 +87,7 @@ function mealRecipeModal(meal){
 
 document.querySelector(".formSheet").addEventListener("submit", submitForm)
 function submitForm(e) {
-    e.preventDefault()
+    e.preventDefault();
     let name = document.querySelector(".name").value
     let phone = document.querySelector(".number").value
     let email = document.querySelector(".email").value
@@ -98,7 +96,7 @@ function submitForm(e) {
 }
 function sendEmail(name, phone, email, message) {
     Email.send({
-        SecureToken : "9e9b9c61-1212-48bd-9687-86587f16cbc4",
+        SecureToken : "3a767535-e244-4285-93a4-31d03fdd5913",
         To : 'davempark@gmail.com',
         From : 'holynuggets36@gmail.com',
         Subject : name+" has sent you a message",

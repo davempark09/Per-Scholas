@@ -3,8 +3,10 @@
     padding: 0;
     font-family:Georgia, 'Times New Roman', Times, serif;
     box-sizing: border-box;
-    font-weight: bold;;
+    font-weight: bold;
 }
+
+
 
 .navbar{
     background: #131313;
@@ -162,6 +164,8 @@
 
 }
 
+
+
 .footContainer{
     background-color: black;
     padding: 0;
@@ -235,7 +239,6 @@
 #serviceBody {
     margin:0;
 }
-
 .mainContainer {
     width: 100vw;
     height: 100vh;
@@ -245,7 +248,6 @@
     gap: 1px;
     padding:20px;
 }
-
 .mainContainer div {
     padding: 20px;
     border: none;
@@ -260,7 +262,6 @@
     grid-row-end: 2;
     line-height: 0px;
 }
-
 #item {
     grid-row-start: 2;
     grid-row-end: 3;
@@ -270,15 +271,11 @@
 
 
 
-
-
-
 body{
     font-weight: 300;
     font-size: 1.05rem;
     line-height: 1.6;
 }
-
 .btn{
     font-family: inherit;
     cursor: pointer;
@@ -292,6 +289,7 @@ body{
     font-size: 2rem;
     margin-bottom: 1rem;
 }
+
 
 
 .container{
@@ -395,7 +393,6 @@ body{
 .recipeBtn:hover{
     background: #287405;
 }
-
 .mealDetails{
     position: fixed;
     top: 50%;
@@ -425,13 +422,9 @@ body{
     background: #f0f0f0;
     border-radius: 2rem;
 }
-
-
-
 .showRecipe{
     display: block;
 }
-
 .mealDetailsContent{
     margin: 2rem;
 }
@@ -488,17 +481,6 @@ body{
 .recipeInstruct{
     padding: 1rem 0;
 }
-.recipeMealImg img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-}
 .recipeLink{
     margin: 1.4rem 0;
 }
@@ -507,16 +489,10 @@ body{
     font-size: 1.2rem;
     font-weight: 700;
     transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
 }
 .recipeLink a:hover{
     opacity: 0.8;
 }
-
-
 .notFound{
     grid-template-columns: 1fr!important;
     color: #32990a;
@@ -537,7 +513,6 @@ body{
         margin-right: auto;
     }
 }
-
 @media screen and (min-width: 768px){
     #meal{
         display: grid;
@@ -551,16 +526,11 @@ body{
         width: 700px;
     }
 }
-
 @media screen and (min-width: 992px){
     #meal{
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
-
-
-
 
 
 
