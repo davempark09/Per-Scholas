@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d3418c68cc.js" crossorigin="anonymous"></script>
+</head>
+<body id="servbody">
+    <nav class="navbar">
+        <div class="navbarContainer">
+                <img src="logo.png" id="logo" alt="Melting Pot">
+            <div class="navbarToggle" id="mobile">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navmenu">
+                <li class="navitem">
+                    <a href="Page 1.html" class="navlinks">About</a>
+                </li>
+                <li class="navitem">
+                    <a href="Page 2.html" class="navlinks">Service</a>
+                </li>
+                <li class="navitem">
+                    <a href="form.html" class="navlinks">Contact</a>
+                </li>
+                <li class="navbtn">
+                    <a href="/" class="button">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+    <div class="mainContainer">
+        <div class="header">
+            <h1 id="head">Search Engine</h1>
+            </div>
+
+            <div id="item" class="type">
+                <div class = "container">
+                    <div class = "meal-wrapper">
+                      <div class = "meal-search">
+                        <h2 class = "title">Find Meals For Your Ingredients</h2>
+                
+                        <div class = "meal-search-box">
+                          <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
+                          <button type = "submit" class = "search-btn btn" id = "search-btn">
+                            <i class = "fas fa-search"></i>
+                          </button>
+                        </div>
+                      </div>
+                
+                      <div class = "meal-result">
+                        <h2 class = "title">Your Search Results:</h2>
+                        <div id= "meal">
+
+                        </div>
+                      </div>
+                
+                
+                      <div class = "meal-details">
+
+                        <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
+                          <i class = "fas fa-times"></i>
+                        </button>
+                
+                        <div class = "meal-details-content">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>            
+    </div>
+    
+
+
+    
+    <script src="app.js"></script>
+</body>
+<footer>
+    <div class="footcont">
+        <div class="socialmed">
+            <div class="socialwrap">
+                <div class="footlogo">
+                    <img src="logo.png" alt="Melting Pot">
+                </div>
+                <p class="rights">&#169 Melting Pot 2021. All rights</p>
+                <div class="socialicon">
+                    <a href="/" class="sociallinks" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="/" class="sociallinks" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="/" class="sociallinks" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="/" class="sociallinks" target="_blank">
+                        <i class="fab fa-snapchat"></i>
+                    </a>
+                    <a href="/" class="sociallinks" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

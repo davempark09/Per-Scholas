@@ -1,0 +1,2 @@
+The purpose of this project is to deliver quality food information to everyone and anyone who wishes to cook more with the main ingredient they have. 
+The target end user for this project would be everyone from professional cooks to everday families. 
