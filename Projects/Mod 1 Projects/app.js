@@ -1,12 +1,34 @@
+document.querySelector(".formSheet").addEventListener("submit", submitForm)
+function submitForm(e) {
+    e.preventDefault();
+    let name = document.querySelector(".name").value
+    let phone = document.querySelector(".number").value
+    let email = document.querySelector(".email").value
+    let message = document.querySelector(".message").value
+    sendEmail(name, phone, email, message)
+}
+function sendEmail(name, phone, email, message) {
+    Email.send({
+        SecureToken : "3a767535-e244-4285-93a4-31d03fdd5913",
+        To : 'davempark@gmail.com',
+        From : 'holynuggets36@gmail.com',
+        Subject : name+" has sent you a message",
+        Body : "Name:"+name+"Phone Number:"+phone+"E-Mail"+email+"Message:"+message
+    }).then(
+    m => alert(m)
+    );
+}
 
 
 const menu = document.querySelector('#mobile')
 const menuLinks = document.querySelector('.navMenu')
 
-menu.addEventListener('click', function(){
+menu.addEventListener('click', getBars);
+function getBars(){
     menu.classList.toggle('isActive');
     menuLinks.classList.toggle('active')
-})
+}
+
 
 
 const searchBtn = document.getElementById('searchBtn');
@@ -84,24 +106,3 @@ function mealRecipeModal(meal){
 }
 
 
-
-document.querySelector(".formSheet").addEventListener("submit", submitForm)
-function submitForm(e) {
-    e.preventDefault();
-    let name = document.querySelector(".name").value
-    let phone = document.querySelector(".number").value
-    let email = document.querySelector(".email").value
-    let message = document.querySelector(".message").value
-    sendEmail(name, phone, email, message)
-}
-function sendEmail(name, phone, email, message) {
-    Email.send({
-        SecureToken : "3a767535-e244-4285-93a4-31d03fdd5913",
-        To : 'davempark@gmail.com',
-        From : 'holynuggets36@gmail.com',
-        Subject : name+" has sent you a message",
-        Body : "Name:"+name+"Phone Number:"+phone+"E-Mail"+email+"Message:"+message
-    }).then(
-    m => alert(m)
-    );
-}
