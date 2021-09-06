@@ -1,4 +1,23 @@
-document.querySelector(".formSheet").addEventListener("submit", submitForm)
+const menu = document.querySelector('#mobile')
+const menuLinks = document.querySelector('.navMenu')
+
+const searchBtn = document.getElementById('searchBtn');
+const mealList = document.getElementById('meal');
+const mealDetailsContent = document.querySelector('.mealDetailsContent');
+const recipeCloseBtn = document.getElementById('recipeCloseBtn');
+
+const form = document.querySelector(".formSheet")
+
+searchBtn && searchBtn.addEventListener('click', getMealList);
+mealList && mealList.addEventListener('click', getMealRecipe);
+form && form.addEventListener("submit", submitForm);
+recipeCloseBtn && recipeCloseBtn.addEventListener('click', () => {
+mealDetailsContent.parentElement.classList.remove('showRecipe');
+});
+
+
+
+
 function submitForm(e) {
     e.preventDefault();
     let name = document.querySelector(".name").value
@@ -19,31 +38,11 @@ function sendEmail(name, phone, email, message) {
     );
 }
 
-
-const menu = document.querySelector('#mobile')
-const menuLinks = document.querySelector('.navMenu')
-
-menu.addEventListener('click', getBars);
+menu && menu.addEventListener('click', getBars);
 function getBars(){
     menu.classList.toggle('isActive');
     menuLinks.classList.toggle('active')
 }
-
-
-
-const searchBtn = document.getElementById('searchBtn');
-const mealList = document.getElementById('meal');
-const mealDetailsContent = document.querySelector('.mealDetailsContent');
-const recipeCloseBtn = document.getElementById('recipeCloseBtn');
-
-
-searchBtn.addEventListener('click', getMealList);
-mealList.addEventListener('click', getMealRecipe);
-recipeCloseBtn.addEventListener('click', () => {
-mealDetailsContent.parentElement.classList.remove('showRecipe');
-});
-
-
 
 function getMealList(){
     let searchInputTxt = document.getElementById('searchInput').value.trim();
@@ -104,5 +103,4 @@ function mealRecipeModal(meal){
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
 }
-
 
