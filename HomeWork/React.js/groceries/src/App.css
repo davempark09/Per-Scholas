@@ -1,0 +1,20 @@
+body{
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+}
+.itemList{
+    text-decoration: line-through;
+}
+.itemList2{
+    text-decoration: none;
+}
+.purch{
+    font-weight: bold;
+    color: red;
+}
