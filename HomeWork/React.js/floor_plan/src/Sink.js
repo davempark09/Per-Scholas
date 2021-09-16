@@ -1,6 +1,6 @@
 import React from "react";
 
-function Sink(prop) {
+function Sink() {
 return (
     <div id="sink">
     <h1>Sink</h1>

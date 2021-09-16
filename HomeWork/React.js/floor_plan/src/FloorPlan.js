@@ -4,7 +4,7 @@ import LivingRoom from "./LivingRoom";
 import Bedroom from "./Bedroom";
 import Bath from "./Bath";
 
-function FloorPlan(props) {
+function FloorPlan() {
 return (
     <div id="floorPlan">
     <div id="cont1">

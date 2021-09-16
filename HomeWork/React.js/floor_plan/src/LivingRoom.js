@@ -1,6 +1,6 @@
 import React from "react";
 
-function LivingRoom(props) {
+function LivingRoom() {
 return (
     <div id="livingRoom">
     <h1>Living Room</h1>
