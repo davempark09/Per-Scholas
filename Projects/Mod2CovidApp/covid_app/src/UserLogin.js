@@ -1,11 +1,11 @@
 import React from 'react'
 
-function FirstContent() {
+function UserLogin() {
     return (
         <div>
-            Hi
+            Bein
         </div>
     )
 }
 
-export default FirstContent
+export default UserLogin
