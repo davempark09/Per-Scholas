@@ -4,6 +4,7 @@ import { faSyringe } from '@fortawesome/free-solid-svg-icons'
 import Homepage from './HomePage'
 import FirstContent from './FirstContent'
 import SecondContent from './SecondContent'
+import ThirdContent from './ThirdContent'
 import Form from './Form'
 import UserLogin from './UserLogin'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
@@ -15,23 +16,22 @@ export class Header extends Component {
         
     render() {
         return (
-        <nav className='NavItems'>
-            <div className='MenuIcon'>
-                {syringeIcon}
-            </div>
-            <h1 className='NavLogo'>Covid Tracker</h1>
+            <nav className='NavItems'>
             <Router>
-            <ul>
-                <li><Link to='/'>Homepage</Link></li>
-                <li><Link to='/FirstContent'>Statistics</Link></li>
-                <li><Link to='/SecondContent'>Visual Data</Link></li>
-                <li><Link to='/Form'>Contact Form</Link></li>
-                <li><Link to='/UserLogin'>User Login</Link></li>
-            </ul>
+                <ul className='MenuIcon'>
+                    <h1 className='NavLogo'> {syringeIcon} Covid Tracker</h1>
+                    <li><Link to='/'>Homepage</Link></li>
+                    <li><Link to='/FirstContent'>Country Search</Link></li>
+                    <li><Link to='/SecondContent'>State Search</Link></li>
+                    <li><Link to='/ThirdContent'>Vaccine Locations</Link></li>
+                    <li><Link to='/Form'>Contact Form</Link></li>
+                    <li><Link to='/UserLogin'>User Login</Link></li>
+                </ul>
             <Switch>
                 <Route exact path='/' component={Homepage} />
                 <Route path='/FirstContent' component={FirstContent} />
                 <Route path='/SecondContent' component={SecondContent} />
+                <Route path='/ThirdContent' component={ThirdContent} />
                 <Route path='/Form' component={Form} />
                 <Route path='/UserLogin' component={UserLogin} />
             </Switch>

@@ -13,23 +13,23 @@ function Form() {
     return (
         <div className='form'>
             <form className="formSheet">
-                <div class="input">
+                <div className="input">
                     <input type="text" className="name" name="Name" required />
-                    <label for="name">{userIcon}Name</label>
+                    <label htmlFor="name">{userIcon} Name</label>
                 </div>
-                <div class="input">
+                <div className="input">
                     <input type="text" className="number" name="Phone Number" required />
-                    <label for="number">{phoneIcon}Phone Number</label>
+                    <label htmlFor="number">{phoneIcon} Phone Number</label>
                 </div>
-                <div class="input">
+                <div className="input">
                     <input type="email" className="email" name="E-mail" required />
-                    <label for="email">{envelopeIcon}E-mail</label>
+                    <label htmlFor="email">{envelopeIcon} E-mail</label>
                 </div>
-                <div class="input">
+                <div className="input">
                     <textarea className="message" rows="8" name="Message" required></textarea>
-                    <label for="message">{pencilIcon}Message</label>
+                    <label htmlFor="message">{pencilIcon} Message</label>
                 </div>
-                <button type="submit" className="formButton">Submit</button>
+                <button type="submit" className="formButton"> Submit</button>
             </form>
         </div>
     )
