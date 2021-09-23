@@ -127,8 +127,8 @@ a:visited {
   flex-direction: column;
   flex-wrap: wrap;
   margin: 10px;
-  height: auto;
-  width: auto;
+  height: 70vh;
+  width: 50vw;
 }
 
 body {
@@ -312,7 +312,8 @@ h1 {
 /* Lists */
 ul {
   list-style-type: none;
+  border: solid black;
 }
 .itemList {
-  padding: 25px;
+  padding: 10px;
 }

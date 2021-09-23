@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+
 
 
 function ThirdContent() {
@@ -12,25 +13,6 @@ function ThirdContent() {
         e.preventDefault();
         findVaccine(vaccineCity, vaccineState)
     }
-
-    // const addStuff = (stuff) => {
-    //     let stuffs = [...combined, stuff];
-    //     setCombined(stuffs);
-    //   }
-
-
-// const getStatesData = async () => {
-// await fetch ("https://api.covidactnow.org/v2/states.json?apiKey=2cf3054f5c1243c5a8621daf03f129e6")
-// .then ((response) => response.json())
-// .then ((data) => {
-// const information = data.map((info) => (
-// {
-// name: info.state,
-// value: info.state,
-// }));
-// setVaccines(information);
-// })
-// }
     
     const findVaccine = async (vaccineCity, vaccineState) => {
         await fetch(`https://data.cdc.gov/resource/5jp2-pgaw.json?loc_admin_state=${vaccineState}&loc_admin_city=${vaccineCity}`)
@@ -51,21 +33,21 @@ console.log(component)
                 </div>
                 <button type="submit" className="formButton"> Submit </button>
             </form>
+
             {component.map((item,index) => (
 
                     <div key={index} className="results">
                         {item.in_stock ? (
                         <ul  className="itemList">
-                        <li>Location Name: {item.loc_name} <br/> Medication: {item.med_name} <br/> Location Address:{item.loc_admin_street1} <br/> <span className="inStock">Medication Available</span>
+                        <li>Location Name: {item.loc_name} <br/> Medication: {item.med_name} <br/> Location Address:{item.loc_admin_street1} <br/> Location Phone:{item.loc_phone} <br/> <span className="inStock">Medication Available</span>
                         </li>
                         </ul>
                         ):(
                             <ul  className="itemList">
-                        <li>Location Name: {item.loc_name} <br/> Medication: {item.med_name} <br/> Location Address:{item.loc_admin_street1} <br/> <span className="outStock">Medication Not Available</span>
+                        <li>Location Name: {item.loc_name} <br/> Medication: {item.med_name} <br/> Location Address:{item.loc_admin_street1} <br/> Location Phone:{item.loc_phone} <br/> <span className="outStock">Medication Not Available</span>
                         </li>
                         </ul>
                         )}
-
                     </div>
             ))}
         </div>
