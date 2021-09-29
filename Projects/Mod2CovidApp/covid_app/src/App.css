@@ -182,20 +182,20 @@ body {
   font-family: "Inter";
 }
 
-.login__form {
+.loginForm {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.login__form > h1 {
+.loginForm > h1 {
   font-size: 35px;
   margin-bottom: 15px;
   padding-bottom: 10px;
   letter-spacing: -1px;
 }
 
-.login__form > input {
+.loginForm > input {
   min-width: 380px;
   padding: 20px 0;
   padding-left: 15px;
@@ -207,7 +207,7 @@ body {
   font-size: 15px;
 }
 
-.submit__btn {
+.submitButton {
   padding: 17px 30px;
   margin-top: 10px;
   background: black;
@@ -228,7 +228,7 @@ body {
   font-family: "Inter";
 }
 
-.logout__button {
+.logoutButton {
   min-width: 300px;
   padding: 17px 30px;
   margin-top: 20px;
@@ -240,8 +240,8 @@ body {
   border-radius: 3px;
 }
 
-.user__name {
-  color: #b9b9b9;
+.userName {
+  color: #ce15d4;
 }
 
 /* Links */
@@ -316,4 +316,5 @@ ul {
 }
 .itemList {
   padding: 10px;
+  margin: 5px;
 }

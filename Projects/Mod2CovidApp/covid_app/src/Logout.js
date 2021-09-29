@@ -13,9 +13,9 @@ const logout = (e) => {
 return (
     <form className="logout">
     <h1>
-        Welcome <span className="user__name">{user.name}</span>!
+        Welcome <span className="userName">{user.name}</span>!
     </h1>
-    <button className="logout__button" onClick={(e) => logout(e)}>
+    <button className="logoutButton" onClick={(e) => logout(e)}>
         Log out
     </button>
     </form>
